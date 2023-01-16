@@ -1,8 +1,8 @@
 local:
   rabbit:
-    host: "127.0.0.1"
+    host: "ec2-44-203-141-1.compute-1.amazonaws.com"
     port: 5672
     virtualHost: "/"
     connectionName: "go-rabbitmq-consumer-app"
-    username: "user"
-    password: "password"
+    username: "admin"
+    password: "123456"

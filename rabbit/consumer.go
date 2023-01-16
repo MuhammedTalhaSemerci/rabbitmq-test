@@ -16,10 +16,12 @@ func (c *Client) InitializeConsumers() {
 			channel := c.CreateChannel(queueConfig.PrefetchCount)
 			channelName := generateChannelName()
 			deliveries, err := channel.Consume(queueConfig.Queue, channelName, false, false, false, false, nil)
-			channel.Publish(queueConfig.Exchange, queueConfig.Queue, false, false, amqp.Publishing{
-				ContentType: "text/plain",
-				Body:        []byte("test"),
-			})
+			/*
+				channel.Publish(queueConfig.Exchange, queueConfig.Queue, false, false, amqp.Publishing{
+					ContentType: "text/plain",
+					Body:        []byte("test"),
+				})
+			*/
 			if err != nil {
 				log.Panicf("Terminating. Error details: %s", err.Error())
 			}
