@@ -10,5 +10,5 @@ This repository is made for a boilerplate that can be a milestone for the develo
 
 ## Run Normal
 - ``` go run main ```
-## Run wtih Docker
+## Run with Docker
 - ``` docker run -d --name rabbitmq-test rabbitmq-test```
